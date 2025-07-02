@@ -37,4 +37,4 @@ info:
   app:
     name: Question Service
     description: Exposes end-points to get the questions
-    owner: Beast Boy
+    owner: Ryomen
