@@ -1,0 +1,40 @@
+spring:
+  datasource:
+    generate-unique-name: false
+    name: questions
+    url: jdbc:h2:mem:questions
+    username: "{cipher}f0e0577294e1af7be82d46daa975e3005c4a0f6c5a7f0b4a1c2e50bb518b0767"
+    password: "{cipher}8db0d1db56bb729ebd0374d05e1a8fde432b711f6a5681e762ac94adfcd8faa9"
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
+
+server:
+  port: 8082
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, busrefresh, info
+  endpoint:
+    health:
+      probes:
+        enabled: true
+
+  health:
+    readinessstate:
+      enabled: true
+    livenessstate:
+      enabled: true
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: Question Service
+    description: Exposes end-points to get the questions
+    owner: Beast Boy

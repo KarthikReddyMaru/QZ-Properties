@@ -1,0 +1,40 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:users
+    generate-unique-name: false
+    name: users
+    username: "{cipher}f0e0577294e1af7be82d46daa975e3005c4a0f6c5a7f0b4a1c2e50bb518b0767"
+    password: "{cipher}3ee37760f73b2a9a4b557d6a462dd99d9d411fe96845a8a6a56907bd5ad7da6e"
+  jpa:
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 8081
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, busrefresh, info
+  endpoint:
+    health:
+      probes:
+        enabled: true
+
+  health:
+    readinessstate:
+      enabled: true
+    livenessstate:
+      enabled: true
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: User Service
+    description: Allows users to register with QZ.
+    owner: Beast Boy
