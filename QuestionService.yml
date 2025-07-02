@@ -36,5 +36,5 @@ management:
 info:
   app:
     name: Question Service
-    description: Exposes end-points to get the questions
+    description: Exposes end-points related to questions
     owner: Ryomen
