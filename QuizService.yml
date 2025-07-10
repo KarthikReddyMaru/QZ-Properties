@@ -1,0 +1,40 @@
+spring:
+  datasource:
+    generate-unique-name: false
+    name: quiz
+    url: jdbc:h2:mem:quiz
+    username: "{cipher}f0e0577294e1af7be82d46daa975e3005c4a0f6c5a7f0b4a1c2e50bb518b0767"
+    password: "{cipher}260e38e34977cbcf48edb3441d51631f660eca782338f4c8f27607b9b45e5bcd"
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
+
+server:
+  port: 8083
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, busrefresh, info
+  endpoint:
+    health:
+      probes:
+        enabled: true
+
+  health:
+    readinessstate:
+      enabled: true
+    livenessstate:
+      enabled: true
+  info:
+    env:
+      enabled: true
+
+info:
+  app-name: Quiz Service
+  app-description: Creates quiz
+  app-owner: Beast Boy
