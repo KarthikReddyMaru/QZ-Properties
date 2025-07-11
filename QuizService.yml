@@ -38,3 +38,7 @@ info:
   app-name: Quiz Service
   app-description: Creates quiz
   app-owner: Beast Boy
+
+question:
+  baseUrl:
+    http://localhost:8082
