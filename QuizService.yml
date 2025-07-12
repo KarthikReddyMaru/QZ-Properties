@@ -54,4 +54,4 @@ eureka:
 
 question:
   baseUrl:
-    http://localhost:8082
+    http://QUESTIONSERVICE
