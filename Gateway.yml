@@ -1,3 +1,13 @@
+spring:
+  cloud:
+    gateway:
+      server:
+        webflux:
+          discovery:
+            locator:
+              enabled: true
+              lower-case-service-id: true
+
 server:
   port: 9000
 
@@ -14,6 +24,8 @@ management:
       exposure:
         include: "*"
   endpoint:
+    gateway:
+      access: unrestricted
     health:
       probes:
         enabled: true
