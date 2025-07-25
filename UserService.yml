@@ -1,10 +1,10 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:users
+    url: jdbc:mysql://localhost:3306/users
     generate-unique-name: false
     name: users
-    username: "{cipher}f0e0577294e1af7be82d46daa975e3005c4a0f6c5a7f0b4a1c2e50bb518b0767"
-    password: "{cipher}8db0d1db56bb729ebd0374d05e1a8fde432b711f6a5681e762ac94adfcd8faa9"
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
   jpa:
     open-in-view: false
     show-sql: true
