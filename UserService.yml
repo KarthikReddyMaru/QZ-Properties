@@ -33,6 +33,11 @@ management:
     env:
       enabled: true
 
+keycloak:
+  base-url: "http://localhost:8000"
+  client-id: "QZ-UserService"
+  client-secret: "jmPwKa4DyoE0OPt5rKRGbwx1yFsyv1cj"
+
 info:
   app:
     name: User Service
